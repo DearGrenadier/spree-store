@@ -1,1 +1,11 @@
 ru:
+  option_types:
+    mattress_size:
+      name: 'Размеры для матрасов'
+      presentation: 'Размер'
+    cover_size:
+      name: 'Размеры для наматрасников'
+      presentation: 'Размер'
+    bed_frame_size:
+      name: 'Размеры для оснований'
+      presentation: 'Размер'
