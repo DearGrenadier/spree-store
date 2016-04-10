@@ -1,1 +1,5 @@
-# spree-store
+# Seed prototypes
+
+```
+rake db:seed:prototypes
+```
