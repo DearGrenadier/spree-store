@@ -8,7 +8,7 @@ Bundler.require(*Rails.groups)
 
 module SpreeStore
   class Application < Rails::Application
-    
+
     config.to_prepare do
       # Load application's model / class decorators
       Dir.glob(File.join(File.dirname(__FILE__), "../app/**/*_decorator*.rb")) do |c|
@@ -48,5 +48,7 @@ module SpreeStore
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    config.autoload_paths << Rails.root.join('db/seeds')
   end
 end
