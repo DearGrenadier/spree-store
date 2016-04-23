@@ -26,9 +26,9 @@ COVER_PROPERTIES = %i( age_category warranty manufacturer cover_type fixation cl
 
 def create_option_type(prototype_type)
   return if prototype_type == :pillow
-  option_type = Spree::OptionType.find_by_name(I18n.t("option_types.#{prototype_type}_size.name")) ||
-                Spree::OptionType.create(name: I18n.t("option_types.#{prototype_type}_size.name"),
-                                         presentation: I18n.t("option_types.#{prototype_type}_size.presentation"))
+  option_type = Spree::OptionType.find_by_name(I18n.t("seed.option_types.#{prototype_type}_size.name")) ||
+                Spree::OptionType.create(name: I18n.t("seed.option_types.#{prototype_type}_size.name"),
+                                         presentation: I18n.t("seed.option_types.#{prototype_type}_size.presentation"))
   create_option_values(option_type, prototype_type)
   option_type
 end
@@ -40,16 +40,16 @@ def create_option_values(option_type, prototype_type)
 end
 
 %i( mattress cover bed_frame pillow ).each do |prototype_type|
-  prototype = Spree::Prototype.find_by(name: I18n.t("prototypes.#{prototype_type}")) ||
-              Spree::Prototype.new(name: I18n.t("prototypes.#{prototype_type}"))
+  prototype = Spree::Prototype.find_by(name: I18n.t("seed.prototypes.#{prototype_type}")) ||
+              Spree::Prototype.new(name: I18n.t("seed.prototypes.#{prototype_type}"))
 
   prototype.option_type_ids = [create_option_type(prototype_type).try(:id)]
 
   properties = []
   "#{prototype_type.upcase}_PROPERTIES".constantize.each do |property|
-    property = Spree::Property.joins(:translations).find_by_name(I18n.t("properties.#{property}.name")) ||
-               Spree::Property.create(name: I18n.t("properties.#{property}.name"),
-                                      presentation: I18n.t("properties.#{property}.presentation"))
+    property = Spree::Property.joins(:translations).find_by_name(I18n.t("seed.properties.#{property}.name")) ||
+               Spree::Property.create(name: I18n.t("seed.properties.#{property}.name"),
+                                      presentation: I18n.t("seed.properties.#{property}.presentation"))
     properties << property.id
   end
 

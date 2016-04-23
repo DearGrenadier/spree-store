@@ -1,0 +1,38 @@
+/ start header section
+header#aa-header
+  = render 'spree/shared/header_top'
+  / start header bottom
+  .aa-header-bottom
+    .container
+      .row
+        .col-md-12
+          .aa-header-bottom-area
+            / start logo
+            .aa-logo
+              / text based logo
+              = link_to root_path
+                span.fa.fa-shopping-cart
+                p
+                  | daily
+                  strong Shop
+                  span Your Shopping Partner
+              / img based logo
+              / <a href="index.html"><img src="img/logo.jpg" alt="logo img"></a
+            / end logo
+            / start cart box
+            .aa-cartbox
+              a.aa-cart-link href="#"
+                span.fa.fa-shopping-basket
+                span.aa-cart-title SHOPPING CART
+                span.aa-cart-notify 2
+              = render 'spree/shared/cart'
+            / end cart box
+            / start search box
+            .aa-search-box
+              form action=""
+                input id="" name="" placeholder=("Search here ex. 'man' ") type="text" /
+                button type="submit"
+                  span.fa.fa-search
+            / end search box
+  / end header bottom
+/ end header section

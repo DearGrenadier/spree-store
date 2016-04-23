@@ -1,0 +1,27 @@
+#signin-modal.modal.fade aria-hidden='true' aria-labelledby='myModalLabel' role='dialog' tabindex='-1'
+  .modal-dialog
+    .modal-content
+      .modal-body
+        button.close aria-hidden='true' data-dismiss='modal' type='button' &times;
+        h4 = Spree.t(:login)
+        = form_for Spree::User.new, as: :spree_user, url: spree.create_new_session_path,
+                   html: {class: 'aa-login-form' } do |f|
+          label
+            = Spree::User.human_attribute_name(:email)
+            span *
+          = f.email_field :email, placeholder: Spree::User.human_attribute_name(:email)
+          label
+            = Spree::User.human_attribute_name(:password)
+            span *
+          = f.password_field :password, placeholder: Spree::User.human_attribute_name(:password)
+          button.aa-browse-btn type='submit'
+            = Spree.t(:login)
+          label.rememberme
+            = f.check_box :remember_me
+            | &nbsp;&nbsp;
+            = Spree.t(:remember_me)
+          p.aa-lost-password
+            = link_to Spree.t(:lost_password), '#'
+          .aa-register-now
+            = Spree.t(:dont_have_account)
+            = link_to Spree.t(:register_now)

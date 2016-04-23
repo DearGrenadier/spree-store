@@ -1,0 +1,15 @@
+title  = title
+meta charset='utf-8'
+meta content='text/html; charset=UTF-8' http-equiv='Content-Type'
+meta http-equiv='X-UA-Compatible' content='IE=edge'
+meta name='viewport' content='width=device-width, initial-scale=1'
+/ Google Font
+link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'
+link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'
+= stylesheet_link_tag 'application'
+== meta_data_tags
+= canonical_tag(current_store.url)
+= favicon_link_tag 'favicon.ico'
+= csrf_meta_tags
+/![if lt IE 9]
+  <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6/html5shiv.min.js"></script>

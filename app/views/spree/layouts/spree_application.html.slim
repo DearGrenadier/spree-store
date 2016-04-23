@@ -1,0 +1,25 @@
+doctype html
+
+/[if lt IE 7 ]
+  | <html class='ie ie6' lang=I18n.locale>
+/[if IE 7 ]
+  | <html class='ie ie7' lang=I18n.locale>
+/[if IE 8 ]
+  | <html class='ie ie8' lang=I18n.locale>
+/[if IE 9 ]
+  | <html class='ie ie9' lang=I18n.locale>
+
+html lang=I18n.locale
+  head data-hook='inside_head'
+    = render 'spree/shared/custom_head'
+  body
+    = render partial: 'spree/shared/google_analytics.js'
+    = render 'spree/shared/loader'
+    = render 'spree/shared/header'
+    = render 'spree/shared/menu'
+    == yield
+    = render 'spree/shared/footer'
+    / Shared
+    = render 'spree/shared/sign_in'
+    = render 'spree/shared/sign_up'
+    = javascript_include_tag 'application'

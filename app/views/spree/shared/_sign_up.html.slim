@@ -1,0 +1,28 @@
+#signup-modal.modal.fade aria-hidden='true' aria-labelledby='myModalLabel' role='dialog' tabindex='-1'
+  .modal-dialog
+    .modal-content
+      .modal-body
+        button.close aria-hidden='true' data-dismiss='modal' type='button' &times;
+        h4 = Spree.t(:registration)
+        = form_for Spree::User.new, as: :spree_user, url: spree.registration_path,
+                   html: {class: 'aa-login-form' } do |f|
+          label
+            = Spree::User.human_attribute_name(:email)
+            span *
+          = f.email_field :email, placeholder: Spree::User.human_attribute_name(:email)
+          label
+            = Spree::User.human_attribute_name(:password)
+            span *
+          = f.password_field :password, placeholder: Spree::User.human_attribute_name(:password)
+          label
+            = Spree::User.human_attribute_name(:password_confirmation)
+            span *
+          = f.password_field :password_confirmation,
+                             placeholder: Spree::User.human_attribute_name(:password_confirmation)
+          button.aa-browse-btn type='submit'
+            = Spree.t(:registration)
+          - 3.times do
+            br
+          .aa-register-now
+            = Spree.t(:have_account)
+            = link_to Spree.t(:login)

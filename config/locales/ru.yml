@@ -1,80 +1,90 @@
 ru:
-  option_types:
-    mattress_size:
-      name: 'Размеры для матрасов'
-      presentation: 'Размер'
-    cover_size:
-      name: 'Размеры для наматрасников'
-      presentation: 'Размер'
-    bed_frame_size:
-      name: 'Размеры для оснований'
-      presentation: 'Размер'
-  properties:
-    warranty:
-      name: 'Гарантия'
-      presentation: 'Гарантийный срок (мес.)'
-    service_time:
-      name: 'Срок службы'
-      presentation: 'Срок службы (лет)'
-    mattress_type:
-      name: 'Тип матраса'
-      presentation: 'Тип матраса'
-    mattress_height:
-      name: 'Высота матраса'
-      presentation: 'Высота матраса (см)'
-    max_load:
-      name: 'Макс. нагрузка'
-      presentation: 'Макс. нагрузка на спальное место (кг)'
-    top_load_level:
-      name: 'Ур. жестк.(верх)'
-      presentation: 'Уровень жесткости (верхняя сторона)'
-    bottom_load_level:
-      name: 'Ур. жестк.(низ)'
-      presentation: 'Уровень жесткости (нижняя сторона)'
-    base_mattress_block:
-      name: 'Блок матраса'
-      presentation: 'Базовый блок матраса'
-    springs_number:
-      name: 'Кол-во пружин'
-      presentation: 'Количество пружин (на м2)'
-    clothing_material:
-      name: 'Ткань чехла'
-      presentation: 'Ткань чехла'
-    removable_cover:
-      name: 'Съемный чехол'
-      presentation: 'Съемный чехол'
-    manufacturer:
-      name: 'Производитель'
-      presentation: 'Старана производителя'
-    lamellas_distance:
-      name: 'Расстояние между ламелями'
-      presentation: 'Расстояние между ламелями(мм)'
-    lamellas_witdth:
-      name: 'Ширина ламели'
-      presentation: 'Ширина ламели (мм)'
-    linkage:
-      name: 'Подъемный механизм'
-      presentation: 'Подъемный механизм'
-    age_category:
-      name: 'Возрастная категория'
-      presentation: 'Возрастная категория'
-    pillow_size:
-      name: 'Размер подушки'
-      presentation: 'Размер'
-    pillow_block:
-      name: 'Базовый блок подушки'
-      presentation: 'Базовый блок подушки'
-    cover_type:
-      name: 'Тип наматрасника'
-      presentation: 'Тип наматрасника'
-    fixation:
-      name: 'Крепление'
-      presentation: 'Крепление'
-    cleaning_method:
-      name: 'Способ очистки'
-      presentation: 'Способ очистки'
-  prototypes:
-    mattress: 'Матрас'
-    pillow: 'Подушка'
-    cover: 'Наматрасник'
-    bed_frame: 'Основание для кровати'
+  seed:
+    option_types:
+      mattress_size:
+        name: 'Размеры для матрасов'
+        presentation: 'Размер'
+      cover_size:
+        name: 'Размеры для наматрасников'
+        presentation: 'Размер'
+      bed_frame_size:
+        name: 'Размеры для оснований'
+        presentation: 'Размер'
+    properties:
+      warranty:
+        name: 'Гарантия'
+        presentation: 'Гарантийный срок (мес.)'
+      service_time:
+        name: 'Срок службы'
+        presentation: 'Срок службы (лет)'
+      mattress_type:
+        name: 'Тип матраса'
+        presentation: 'Тип матраса'
+      mattress_height:
+        name: 'Высота матраса'
+        presentation: 'Высота матраса (см)'
+      max_load:
+        name: 'Макс. нагрузка'
+        presentation: 'Макс. нагрузка на спальное место (кг)'
+      top_load_level:
+        name: 'Ур. жестк.(верх)'
+        presentation: 'Уровень жесткости (верхняя сторона)'
+      bottom_load_level:
+        name: 'Ур. жестк.(низ)'
+        presentation: 'Уровень жесткости (нижняя сторона)'
+      base_mattress_block:
+        name: 'Блок матраса'
+        presentation: 'Базовый блок матраса'
+      springs_number:
+        name: 'Кол-во пружин'
+        presentation: 'Количество пружин (на м2)'
+      clothing_material:
+        name: 'Ткань чехла'
+        presentation: 'Ткань чехла'
+      removable_cover:
+        name: 'Съемный чехол'
+        presentation: 'Съемный чехол'
+      manufacturer:
+        name: 'Производитель'
+        presentation: 'Старана производителя'
+      lamellas_distance:
+        name: 'Расстояние между ламелями'
+        presentation: 'Расстояние между ламелями(мм)'
+      lamellas_witdth:
+        name: 'Ширина ламели'
+        presentation: 'Ширина ламели (мм)'
+      linkage:
+        name: 'Подъемный механизм'
+        presentation: 'Подъемный механизм'
+      age_category:
+        name: 'Возрастная категория'
+        presentation: 'Возрастная категория'
+      pillow_size:
+        name: 'Размер подушки'
+        presentation: 'Размер'
+      pillow_block:
+        name: 'Базовый блок подушки'
+        presentation: 'Базовый блок подушки'
+      cover_type:
+        name: 'Тип наматрасника'
+        presentation: 'Тип наматрасника'
+      fixation:
+        name: 'Крепление'
+        presentation: 'Крепление'
+      cleaning_method:
+        name: 'Способ очистки'
+        presentation: 'Способ очистки'
+    prototypes:
+      mattress: 'Матрас'
+      pillow: 'Подушка'
+      cover: 'наматрасник'
+    bed_frame: 'основание для кровати'
+  spree:
+    login: 'Вход'
+    lost_password: 'Забыли пароль?'
+    dont_have_account: 'Нет аккаунта?'
+    have_account: 'Есть аккаунт?'
+    register_now: 'Зарегистроваться!'
+
+
+

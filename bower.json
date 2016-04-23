@@ -1,0 +1,27 @@
+{
+  "name": "spree-store",
+  "homepage": "https://github.com/cosmosloth/spree-store",
+  "authors": [
+    "Dima Nazarchuk <dmitry@nazarchuk.cf>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor/assets/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.3",
+    "jquery-ujs": "^1.2.1",
+    "bootstrap": "^3.3.6",
+    "slick-carousel": "^1.5.9",
+    "nouislider": "^8.4.0",
+    "smartmenus": "^1.0.0",
+  }
+}
