@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
-  mount Spree::Core::Engine, :at => '/'
+  get '/contacts', to: 'contacts#index', as: :contacts
 
-  Spree::Core::Engine.routes.append do
-    get '/contacts' => 'contacts#index', as: :contacts
-  end
+  mount Spree::Core::Engine, :at => '/'
 end

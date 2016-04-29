@@ -1,0 +1,101 @@
+section#aa-product
+  .container
+    .row
+      .col-md-12
+        .row
+          .aa-product-area
+            .aa-product-inner
+              ul.nav.nav-tabs.aa-products-tab
+                li.active
+                  = link_to Spree.t(:mattresses), '#mattresses', 'data-toggle' => 'tab'
+                li
+                  = link_to Spree.t(:pillows), '#pillows', 'data-toggle' => 'tab'
+                li
+                  = link_to Spree.t(:covers), '#covers', 'data-toggle' => 'tab'
+                li
+                  = link_to Spree.t(:bed_frames), '#bed-frames', 'data-toggle' => 'tab'
+              .tab-content
+                /! Start men product category
+                #mattresses.tab-pane.fade.in.active
+                  ul.aa-product-catg
+                    /! start single product item
+                    - @mattresses.each do |mattress|
+                      li
+                        figure
+                          = link_to '#', class: 'aa-product-img' do
+                            = image_tag mattress.variant_images.first.attachment.url, size: '250x300'
+                          = link_to '#', class: 'aa-add-card-btn' do
+                            span.fa.fa-shopping-cart
+                            | Add To Cart
+                          figcaption
+                            h4.aa-product-title
+                              = link_to mattress.name
+                            span.aa-product-price
+                              = mattress.master.price
+                        .aa-product-hvr-content
+                          = link_to '#', 'data-placement' => 'top', 'data-target' => '#quick-view-modal',
+                                    'data-toggle' => 'modal', 'data-toggle2' => 'tooltip', 'title' => 'Quick View' do
+                            span.fa.fa-search
+                  = link_to '#', class: 'aa-browse-btn' do
+                    | browse all
+                    span.fa.fa-long-arrow-right
+                /! / electronic product category
+              /! quick view modal
+              #quick-view-modal.modal.fade aria-hidden='true' aria-labelledby='mymodallabel' role='dialog' tabindex='-1'
+                .modal-dialog
+                  .modal-content
+                    .modal-body
+                      button.close aria-hidden='true' data-dismiss='modal' type='button'  &times;
+                      .row
+                        /! Modal view slider
+                        .col-md-6.col-sm-6.col-xs-12
+                          .aa-product-view-slider
+                            #demo-1.simpleLens-gallery-container
+                              .simpleLens-container
+                                .simpleLens-big-image-container
+                                  a.simpleLens-lens-image data-lens-image='img/view-slider/large/polo-shirt-1.png'
+                                    img.simpleLens-big-image src='img/view-slider/medium/polo-shirt-1.png' /
+                              .simpleLens-thumbnails-container
+                                a.simpleLens-thumbnail-wrapper data-big-image='img/view-slider/medium/polo-shirt-1.png' data-lens-image='img/view-slider/large/polo-shirt-1.png' href='#'
+                                 / img src='img/view-slider/thumbnail/polo-shirt-1.png' /
+                                a.simpleLens-thumbnail-wrapper data-big-image='img/view-slider/medium/polo-shirt-3.png' data-lens-image='img/view-slider/large/polo-shirt-3.png' href='#'
+                                 / img src='img/view-slider/thumbnail/polo-shirt-3.png' /
+                                a.simpleLens-thumbnail-wrapper data-big-image='img/view-slider/medium/polo-shirt-4.png' data-lens-image='img/view-slider/large/polo-shirt-4.png' href='#'
+                                 / img src='img/view-slider/thumbnail/polo-shirt-4.png' /
+                        /! Modal view content
+                        .col-md-6.col-sm-6.col-xs-12
+                          .aa-product-view-content
+                            h3 T-Shirt
+                            .aa-price-block
+                              span.aa-product-view-price $34.99
+                              p.aa-product-avilability
+                                | Avilability:
+                                span In stock
+                            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis animi, veritatis quae repudiandae quod nulla porro quidem, itaque quis quaerat!
+                            h4 Size
+                            .aa-prod-view-size
+                              a href='#'  S
+                              a href='#'  M
+                              a href='#'  L
+                              a href='#'  XL
+                            .aa-prod-quantity
+                              form action=''
+                                select id='' name=''
+                                  option selected='1' value='0'  1
+                                  option value='1'  2
+                                  option value='2'  3
+                                  option value='3'  4
+                                  option value='4'  5
+                                  option value='5'  6
+                              p.aa-prod-category
+                                | Category:
+                                a href='#'  Polo T-Shirt
+                            .aa-prod-view-bottom
+                              a.aa-add-to-cart-btn href='#'
+                                span.fa.fa-shopping-cart
+                                | Add To Cart
+                              a.aa-add-to-cart-btn href='#'  View Details
+                  /! /.modal-content
+                /! /.modal-dialog
+              /! / quick view modal
+/! / Products section

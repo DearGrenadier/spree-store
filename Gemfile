@@ -23,14 +23,13 @@ end
 
 group :development do
   gem 'spring'
+  gem 'bullet'
 end
 
 
 gem 'spree', '3.0.7'
 gem 'spree_auth_devise', '3.0.6'
 gem 'spree_i18n', github: 'spree-contrib/spree_i18n', branch: '3-0-stable'
-gem 'spree_static_content', github: 'spree-contrib/spree_static_content', branch: '3-0-stable'
 
 gem 'slim', '3.0.6'
-
 gem 'puma', '3.2.0'

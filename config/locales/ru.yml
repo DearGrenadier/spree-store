@@ -77,14 +77,18 @@ ru:
     prototypes:
       mattress: 'Матрас'
       pillow: 'Подушка'
-      cover: 'наматрасник'
-    bed_frame: 'основание для кровати'
+      cover: 'Наматрасник'
+      bed_frame: 'Основание для кровати'
   spree:
     login: 'Вход'
     lost_password: 'Забыли пароль?'
     dont_have_account: 'Нет аккаунта?'
     have_account: 'Есть аккаунт?'
     register_now: 'Зарегистроваться!'
+    mattresses: 'Матрасы'
+    pillows: 'Подушки'
+    bed_frames: 'Основания'
+    covers: 'Наматрасники'
 
 
 
