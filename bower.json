@@ -23,5 +23,6 @@
     "slick-carousel": "^1.5.9",
     "nouislider": "^8.4.0",
     "smartmenus": "^1.0.0",
+    "sequencejs": "^2.1.0"
   }
 }
